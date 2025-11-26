@@ -8,7 +8,14 @@ class Screen2 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Segunda pantalla"),
-        
+        actions: [
+          IconButton(
+            icon: Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.pop(context);  // pop → vuelve a Screen1
+            },
+          )
+        ],
       ),
       body: Center(child: Text("Llegaste a la segunda pantalla")),
     );

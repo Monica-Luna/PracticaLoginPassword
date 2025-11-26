@@ -8,7 +8,7 @@ class Screen1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Introduce tu usuario y contaseña.")),
+      appBar: AppBar(title: Text("Introduce tu usuario y contaseña")),
       body: Center(
         child: ElevatedButton(
           onPressed: () {
