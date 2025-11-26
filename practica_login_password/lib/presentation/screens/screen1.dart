@@ -32,38 +32,7 @@ class Screen1 extends StatelessWidget {
 
               SizedBox(height: 20),
 
-              ElevatedButton(
-                onPressed: () {
-                  if (user.text == password.text) {
-                    final user1 = user.text;
-
-                    user.clear();
-                    password.clear();
-
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (_) => Screen2(),
-                      ),
-                    );
-
-                  } else {
-                    showDialog(                
-                      context: context,
-                      builder: (_) => AlertDialog(
-                        title: Text("Error"),
-                        content: Text("Usuario y contraseña NO coinciden"),
-                        actions: [
-                          TextButton(
-                            child: Text("OK"),
-                            onPressed: () => Navigator.pop(context),
-                          )
-                        ],
-                      ),
-                    );
-                  }
-                },
-                child: Text("Entrar"),
-              ),
+              
             ],
           ),
         ),
