@@ -35,8 +35,8 @@ class Screen1 extends StatelessWidget {
               ElevatedButton(
                 onPressed: () {
                   if (user.text == password.text) {
-
                     final user1= user.text;
+                    // limpiamos los datos introducidos
                     user.clear();
                     password.clear();
 
