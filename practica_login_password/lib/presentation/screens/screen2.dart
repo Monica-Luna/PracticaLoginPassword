@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class Screen2 extends StatelessWidget {
-  const Screen2({super.key});
+    final String userScreen2;
+
+  const Screen2({super.key, required this.userScreen2});
+    
+
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +21,9 @@ class Screen2 extends StatelessWidget {
           )
         ],
       ),
-      body: Center(child: Text("Llegaste a la segunda pantalla")),
+      body: Center(
+        child: 
+        Text("Llegaste a la segunda pantalla")),
     );
   }
 }

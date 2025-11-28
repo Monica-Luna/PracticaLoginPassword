@@ -36,12 +36,13 @@ class Screen1 extends StatelessWidget {
                 onPressed: () {
                   if (user.text == password.text) {
 
+                    final user1= user.text;
                     user.clear();
                     password.clear();
 
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (_) => Screen2(),
+                        builder: (_) => Screen2(userScreen2: user1),
                       ),
                     );
 
