@@ -12,7 +12,7 @@ class Screen2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Segunda pantalla"),
+        title: Text("Estas en la segunda pantalla $userScreen2"),
         actions: [
           IconButton(
             icon: Icon(Icons.arrow_back),

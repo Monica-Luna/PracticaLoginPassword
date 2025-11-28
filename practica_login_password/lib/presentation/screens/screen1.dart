@@ -39,15 +39,15 @@ class Screen1 extends StatelessWidget {
                   if (user.text == password.text) {
                     final user1= user.text;
                     // limpiamos los datos introducidos
-                    user.clear();
-                    password.clear();
-
                     /*Navigator.of(context).push(
                       MaterialPageRoute(
                         builder: (_) => Screen2(userScreen2: user1),
                       ),
                     );*/
+                    // otra forma de limpiar los datos introducidos
                     context.pushNamed(Screen2.name, pathParameters: {'userScreen2': user1});
+                    user.clear();
+                    password.clear();
 
                   } else {
                     showDialog(                
