@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Screen2 extends StatelessWidget {
+    static const String name = 'screen2';
     final String userScreen2;
 
   const Screen2({super.key, required this.userScreen2});

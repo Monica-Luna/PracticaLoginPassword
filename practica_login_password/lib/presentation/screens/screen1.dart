@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:practica_login_password/presentation/screens/screen2.dart';
 
 class Screen1 extends StatelessWidget {
-   final user = TextEditingController();
-   final password = TextEditingController();
+  static const String name = 'screen1';
+  final user = TextEditingController();
+  final password = TextEditingController();
   
   Screen1({super.key});
 
@@ -40,11 +42,12 @@ class Screen1 extends StatelessWidget {
                     user.clear();
                     password.clear();
 
-                    Navigator.of(context).push(
+                    /*Navigator.of(context).push(
                       MaterialPageRoute(
                         builder: (_) => Screen2(userScreen2: user1),
                       ),
-                    );
+                    );*/
+                    context.pushNamed(Screen2.name, pathParameters: {'userScreen2': user1});
 
                   } else {
                     showDialog(                
