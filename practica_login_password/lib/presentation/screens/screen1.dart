@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:practica_login_password/domain/entities/user.dart';
+import 'package:practica_login_password/presentation/provider/user_provider.dart';
 import 'package:provider/provider.dart';
 
-class LoginScreen extends StatelessWidget {
-  LoginScreen({super.key});
+class Screen1 extends StatelessWidget {
+  Screen1({super.key});
 
   static const String name = 'login';
 
@@ -23,7 +25,8 @@ class LoginScreen extends StatelessWidget {
             children: [
               TextFormField(controller: user),
               const SizedBox(height: 20),
-              TextFormField(controller: password),
+              TextFormField(controller: password,
+              obscureText: true,),
               const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
@@ -32,12 +35,9 @@ class LoginScreen extends StatelessWidget {
                     if (usuario.username == user.text &&
                         usuario.password == password.text) {
                       bandera = 1;
-                      context.go('/second/${user.text}');
+                      context.go('/screen2/${user.text}');
                     }
                   }
-                  /*if (user.text == password.text) {
-                    context.go('/second/${user.text}');
-                  } else {*/
                   if (bandera == 0) {
                     showDialog(
                       context: context,

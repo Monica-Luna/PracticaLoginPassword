@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class SecondScreen extends StatelessWidget {
+class Screen2 extends StatelessWidget {
   final String username;
 
-  const SecondScreen({super.key, required this.username});
+  const Screen2({super.key, required this.username});
 
   static const String name = 'second';
 
