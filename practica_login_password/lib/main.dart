@@ -6,23 +6,22 @@ import 'package:practica_login_password/presentation/provider/user_provider.dart
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => UserProvider()),
+      ],
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider(lazy: false, create: (context) => UserProvider()..getUsers()),
-      ],
-      child: MaterialApp.router(
-        title: 'Flutter Login App',
-        debugShowCheckedModeBanner: false,
-        routerConfig: appRouter,
-      ),
+    return MaterialApp.router(
+      routerConfig: appRouter, // tu GoRouter
+      debugShowCheckedModeBanner: false,
     );
   }
 }

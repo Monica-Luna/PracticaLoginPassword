@@ -4,6 +4,7 @@ import 'package:practica_login_password/domain/entities/user.dart';
 import 'package:practica_login_password/presentation/provider/user_provider.dart';
 import 'package:provider/provider.dart';
 
+
 class Screen1 extends StatelessWidget {
   Screen1({super.key});
 
@@ -25,8 +26,10 @@ class Screen1 extends StatelessWidget {
             children: [
               TextFormField(controller: user),
               const SizedBox(height: 20),
-              TextFormField(controller: password,
-              obscureText: true,),
+              TextFormField(
+                controller: password,
+                obscureText: true,
+              ),
               const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {

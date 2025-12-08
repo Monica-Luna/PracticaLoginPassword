@@ -7,9 +7,8 @@ class GetUserspass {
   final _dio = Dio();
 
   Future<List<User>> getUsers() async {
-    final dio = Dio();
     final response = await _dio.get(
-      'https://script.google.com/macros/s/AKfycbwh_ncpAVYm9WmEJRegUnCNz2h8cV_-PxYvSdh-tHh8Iadq6w_ef1YTQueKFqSGb_Kv/exec?spreadsheetId=1hp5ggeKgA2wzvNtP4XUynPeIbferwx-hUBniNswWB0Q&sheet=users',
+      'https://script.google.com/macros/s/AKfycbxMnPE5VBVapJT8DHOV1D99g-vnbv2IfUGO6YnN9vaL7S9gkDo27z5hQpZbKX40yoni/exec?spreadsheetId=1PLB7nqma_bGMF3eveUGUOsQdgngFJZbj7eSFutunCNE&sheet=users',
     );
 
     List<User> listUsers = [];

@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:practica_login_password/presentation/screens/Screen3.dart';
 import 'package:practica_login_password/presentation/screens/screen1.dart';
 import 'package:practica_login_password/presentation/screens/screen2.dart';
 
@@ -16,6 +17,14 @@ final appRouter = GoRouter(
       builder: (context, state) {
         final username = state.pathParameters['username']!;
         return Screen2(username: username);
+      },
+    ),
+    GoRoute(
+      path: '/screen3/:username',
+      name: Screen3.name,
+      builder: (context, state) {
+        final username = state.pathParameters['username']!;
+        return Screen3(username: username);
       },
     ),
   ],

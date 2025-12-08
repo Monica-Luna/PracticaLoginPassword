@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:practica_login_password/presentation/screens/Screen3.dart';
 
 class Screen2 extends StatelessWidget {
   final String username;
@@ -12,7 +13,6 @@ class Screen2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        //title: Text('Hola $username'),
         actions: [
           IconButton(
             tooltip: 'Volver',
@@ -60,10 +60,12 @@ class Screen2 extends StatelessWidget {
             // ITEMS DEL MENÚ (FUERA DEL DrawerHeader)
             ListTile(
               leading: const Icon(Icons.person),
-              title: const Text('Perfil'),
+              title: const Text('Ir a Sreen3'),
               onTap: () {
-                Navigator.pop(context); // Cierra el drawer
-                // Aquí puedes añadir navegación al perfil
+                context.pushNamed(
+                  Screen3.name,
+                  pathParameters: {"username": username},
+                );
               },
             ),
             ListTile(
