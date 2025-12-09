@@ -9,7 +9,7 @@ void main() {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => UserProvider()),
+        ChangeNotifierProvider(lazy: false, create: (_) => UserProvider()..getUsers()),
       ],
       child: MyApp(),
     ),
